@@ -17,7 +17,17 @@ body {
   align-items: center;
 }
 
-.profile-container {
+.portfolio-section {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,6 +88,7 @@ body {
 }
 
 .projects-grid {
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -120,13 +131,14 @@ body {
 }
 
 @media (min-width: 1280px) {
-  .profile-container {
+  header {
+    margin: 0 auto;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
   }
   
-  .profile-header, .contact-desktop, .projects-heading {
-    text-align: left;
+  .projects-heading {
+    text-align: center;
   }
 
   .profile-name, .contact-title { font-size: 2vw; }
@@ -138,8 +150,7 @@ body {
   }
 
   .projects-grid {
-    width: 1090px;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 
   .mobile-only { display: none; }
