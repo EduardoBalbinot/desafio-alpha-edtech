@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --primary-blue: #1e3a8a; 
+  --secondary-blue: #1e40af; 
+  --text-gray: #4b5563; 
+  --light-gray: #f3f4f6; 
+  --border-gray: #d1d5db;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7vw;
+}
+
+.profile-name, .contact-title {
+  color: var(--primary-blue);
+  font-weight: bold;
+  text-align: center;
+}
+
+.profile-title {
+  color: var(--text-gray);
+  text-align: center;
+}
+
+.profile-email, .contact-email {
+  color: #6b7280; 
+  text-align: center;
+}
+
+
+.profile-image-wrapper {
+  position: relative;
+  margin-top: 48px;
+  max-width: 60vw;
+}
+
+.image-spin-bg {
+  position: absolute;
+  width: 100%;
+  transform: scale(1.5);
+  animation: spin 20s linear infinite;
+}
+
+.profile-avatar {
+  position: relative;
+  width: 100%;
+  border-radius: 9999px;
+  border: 4px solid var(--border-gray);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+@keyframes spin {
+  from { transform: scale(1.5) rotate(0deg); }
+  to { transform: scale(1.5) rotate(360deg); }
+}
+
+.projects-heading {
+  margin-top: 160px;
+  margin-bottom: 32px;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--secondary-blue);
+  text-align: center;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.project-card {
+  display: block;
+  background-color: var(--light-gray);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 500px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+  width: 100%;
+  border-radius: 0.5rem;
+  height: auto;
+}
+
+.project-name {
+  padding: 0.25rem 0;
+  font-size: 1.125rem;
+  color: var(--primary-blue);
+}
+
+.project-description {
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+@media (min-width: 1280px) {
+  .profile-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .profile-header, .contact-desktop, .projects-heading {
+    text-align: left;
+  }
+
+  .profile-name, .contact-title { font-size: 2vw; }
+  .profile-title, .profile-email, .contact-email { font-size: 1vw; }
+
+  .profile-image-wrapper {
+    margin-top: 112px;
+    width: 12vw;
+  }
+
+  .projects-grid {
+    width: 1090px;
+    justify-content: flex-start;
+  }
+
+  .mobile-only { display: none; }
+  .desktop-only { display: block; }
+}
+
+@media (max-width: 1279px) {
+  .desktop-only { display: none; }
+}
