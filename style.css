@@ -9,6 +9,7 @@
   --text-gray: #4b5563; 
   --light-gray: #f3f4f6; 
   --border-gray: #d1d5db;
+  overflow-x: hidden;
 }
 
 body {
@@ -36,8 +37,51 @@ header {
 
 .profile-info {
   margin-top: 80px;
-  max-width: 268px;
 }
+
+.mobile-header {
+  position: fixed;
+  background-color: white;
+  padding: 10px;
+  top:0;
+  left: 0;
+  width: 100vw;
+  z-index: 9;
+}
+
+.profile-info-mobile {
+    padding: 40px 20px;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+    height: 120vh;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .opened {
+    left: 0;
+  }
+
+  .open-menu {
+    z-index: 9;
+    padding: 15px;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 99px;
+  }
+
+  .close-menu {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 15px;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 99px;
+  }
 
 .header-title {
   color: var(--primary-blue);
@@ -58,7 +102,7 @@ header {
 
 .profile-image-wrapper {
   position: relative;
-  margin-top: 48px;
+  margin-top: 80px;
   max-width: 60vw;
 }
 
@@ -107,7 +151,6 @@ header {
   padding: 1rem;
   border-radius: 0.5rem;
   width: 100%;
-  max-width: 500px;
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -139,7 +182,7 @@ header {
   display: none;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
   header {
     margin: 0 auto;
     flex-direction: row;
@@ -150,8 +193,18 @@ header {
     text-align: center;
   }
 
-  .profile-name, .contact-title { font-size: 2vw; }
-  .profile-title, .profile-email, .contact-email { font-size: 1vw; }
+  .profile-info {
+    width: 18vw;
+  }
+
+  
+
+  .project-card {
+    max-width: 460px;
+  }
+
+  .header-title { font-size: 2vw; }
+  .header-text { font-size: 1.2vw; }
 
   .profile-image-wrapper {
     margin-top: 112px;
@@ -164,4 +217,13 @@ header {
 
   .mobile-only { display: none; }
   .desktop-only { display: block; }
+}
+
+@media (min-width: 1280px) {
+.header-title { font-size: 2vw; }
+  .header-text { font-size: 1vw; }
+
+  .project-card {
+    max-width: 500px;
+  }
 }
