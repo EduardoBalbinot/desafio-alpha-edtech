@@ -7,14 +7,20 @@
 </head>
 
 <body>
+  <script>
+    function openCloseMenu() {
+      const menu = document.querySelector(".profile-info-mobile");
+      if (menu.classList.contains("opened")) menu.classList.remove("opened");
+      else menu.classList.add("opened");
+    }
+  </script>
   <section class="portfolio-section">
-
     <header>
       <div class="profile-info">
         <h1 class="header-title">Eduardo Balbinot</h1>
         <p class="header-text">Desenvolvedor Web FullStack</p>
-        <h2 class="header-title">Contato</h2>
-        <p class="header-text">eduardo.balbinot.dev@gmail.com</p>
+        <h2 class="header-title desktop-only">Contato</h2>
+        <p class="header-text desktop-only">eduardo.balbinot.dev@gmail.com</p>
       </div>
 
       <div class="profile-image-wrapper">
@@ -22,11 +28,32 @@
         <img src="images/perfil.jpg" alt="foto de perfil" class="profile-avatar">
       </div>
 
-      <div class="profile-info">
+      <div class="profile-info desktop-only">
         <h2 class="header-title">Sobre Mim</h2>
-        <p class="header-text about-me">Olá, me chamo Eduardo, entrei no mundo da programação por pura curiosidade e hoje não vejo outro caminho para seguir. Usar a programação para resolver problemas e necessidades se tornou uma das paixões da minha vida.</p>
+        <p class="header-text about-me">Olá, me chamo Eduardo, entrei no mundo da programação por pura curiosidade e
+          hoje não vejo outro caminho para seguir. Usar a programação para resolver problemas e necessidades se tornou
+          uma das paixões da minha vida.</p>
       </div>
     </header>
+    <div class="mobile-header mobile-only">
+      <button class="open-menu" onclick="openCloseMenu()">
+        <svg clip-rule="evenodd" width="20" height="20" fill-rule="evenodd" stroke-linejoin="round"
+          stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="m21 15.75c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75zm0-4c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75zm0-4c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75z"
+            fill-rule="nonzero" />
+        </svg>
+      </button>
+      <div class="profile-info-mobile">
+        <button class="close-menu" onclick="openCloseMenu()">X</button>
+        <h2 class="header-title ">Contato</h2>
+        <p class="header-text ">eduardo.balbinot.dev@gmail.com</p>
+        <h2 class="header-title">Sobre Mim</h2>
+        <p class="header-text about-me">Olá, me chamo Eduardo, entrei no mundo da programação por pura curiosidade e
+          hoje não vejo outro caminho para seguir. Usar a programação para resolver problemas e necessidades se tornou
+          uma das paixões da minha vida.</p>
+      </div>
+    </div>
     <div class="container">
       <h3 class="projects-heading">Projetos da Alpha Edtech</h3>
 
@@ -62,22 +89,25 @@
             pela loja integrada. Landing Page codada por mim apartir de um figma fornecido por eles.</p>
         </a>
 
-        <a href="https://landing.lojaintegrada.com.br/next10" class="project-card">
-          <img src="images/projects-images/next10.png" alt="Landing page parceria Loja Integrada e next10" class="project-image">
-          <h4 class="project-name">Landing page parceria Loja Integrada e next10</h4>
-          <p class="project-description">Landing page da campanha de divulgação da parceria entre a loja integrada e a
-            next10, codada por mim apartir de um figma fornecido por eles.</p>
-        </a>
-
         <a href="https://landing.lojaintegrada.com.br/institucional" class="project-card">
-          <img src="images/projects-images/lib-li.jpg" alt="Biblioteca de componentes Loja Integrada" class="project-image">
+          <img src="images/projects-images/lib-li.jpg" alt="Biblioteca de componentes Loja Integrada"
+            class="project-image">
           <h4 class="project-name">Biblioteca de componentes Loja Integrada</h4>
           <p class="project-description">Biblioteca de componentes usadados em algumas landing pages da Loja Integrada,
             todos codados por mim apartir de figmas fornecidos por eles.</p>
         </a>
 
+        <a href="https://landing.lojaintegrada.com.br/next10" class="project-card">
+          <img src="images/projects-images/next10.png" alt="Landing page parceria Loja Integrada e next10"
+            class="project-image">
+          <h4 class="project-name">Landing page parceria Loja Integrada e next10</h4>
+          <p class="project-description">Landing page da campanha de divulgação da parceria entre a loja integrada e a
+            next10, codada por mim apartir de um figma fornecido por eles.</p>
+        </a>
+
         <a href="https://dexlabs.deco.site/" class="project-card">
-          <img src="images/projects-images/dexlabs.png" alt="Antigo site institucional da DexLabs" class="project-image">
+          <img src="images/projects-images/dexlabs.png" alt="Antigo site institucional da DexLabs"
+            class="project-image">
           <h4 class="project-name">Antigo site institucional da DexLabs</h4>
           <p class="project-description">Site feito codado por mim apartir de figma fornecido, foi usado pela DexLabs
             até meados de 2025, o site atual deles pode ser encontrado em dexlabs.io</p>
