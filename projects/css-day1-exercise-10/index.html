@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <title>9</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="container">
+      <ul class="header-links text-white">
+        <li>Home</li>
+        <li>About</li>
+        <li>Pages</li>
+        <li>Contact</li>
+      </ul>
+      <div class="header-links-mobile">
+        <button id="openHeaderMenu" onclick="openCloseMenu()">
+          <svg clip-rule="evenodd" width="20" height="20" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m21 15.75c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75zm0-4c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75zm0-4c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75z" fill-rule="nonzero"/></svg>
+        </button>
+        <div class="header-links-mobile-container">
+          <button class="header-links-mobile-close-button" id="closeHeaderMenu" onclick="openCloseMenu()">X</button>
+          <ul >
+            <li>Home</li>
+            <li>About</li>
+            <li>Pages</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </div>
+      <button class="navButton">
+        Subscribe
+      </button>
+    </nav>
+  </header>
+  <section class="mainHero">
+    <div class="container">
+      <div class="text-white hero-text">
+        <h1 class="hero-title">
+          Conquer the wild: <br />
+          Exploring terrains and <br />
+          conquering nature
+        </h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="articlesSection">
+    <div class="container">
+      <div>
+        <h2>Article categories</h2>
+        <button class="articles-button">Browse all articles</button>
+      </div>
+      <div class="article-card">
+        <img src="travel.png" class="bg-img">
+        <a class="article-arrow">
+          <img src="arrow-top-right.svg">
+        </a>
+        <div class="article-text text-white">
+          <h3>Travel</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua.</p>
+        </div>
+      </div>
+      <div class="article-card">
+        <img src="boat.png" class="bg-img">
+        <a class="article-arrow">
+          <img src="arrow-top-right.svg">
+        </a>
+        <div class="article-text text-white">
+          <h3>Adventure</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua.</p>
+        </div>
+      </div>
+      <div class="article-card">
+        <img src="gear.png" class="bg-img">
+        <a class="article-arrow">
+          <img src="arrow-top-right.svg">
+        </a>
+        <div class="article-text text-white">
+          <h3>Gear</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h3 class="popular-now-title">Popular now</h3>
+      <div class="line"></div>
+      <div>
+        <div class="popular-article-card">
+          <h4>Travel <span>- Sep 1, 2023</span></h4>
+          <p>
+            Unveilling hidden gems; Exploring<br />
+            off-the-beaten-path destinations
+          </p>
+        </div>
+
+        <div class="popular-article-card">
+          <h4>Adventure <span>- Sep 1, 2023</span></h4>
+          <p>
+            Conquer the wild; Exploring<br />
+            terrains and conquering nature
+          </p>
+        </div>
+
+        <div class="popular-article-card">
+          <h4>Gear <span>- Sep 1, 2023</span></h4>
+          <p>
+            Gear up for adventure; Equipment<br />
+            for outdoor anthusiasts
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="hero-text">
+        <h2 class=" text-white">
+          Subscribe to our news letter to <br /> receive our daily news
+        </h2>
+        <p class="text-white">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </p>
+        <form>
+          <input type="email" required placeholder="Enter you email" class="email-input" />
+          <input type="submit" value="Subscribe" class="submit" />
+        </form>
+      </div>
+
+      <img src="laptop.png" class="laptop-image" />
+    </div>
+  </footer>
+</body>
+
+<script>
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+
+  function openCloseMenu() {
+    const menu = document.querySelector(".header-links-mobile-container");
+    if (menu.classList.contains("opened")) menu.classList.remove("opened");
+    else menu.classList.add("opened");
+  }
+</script>
+
+</html>
