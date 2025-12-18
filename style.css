@@ -34,22 +34,27 @@ header {
   gap: 7vw;
 }
 
-.profile-name, .contact-title {
+.profile-info {
+  margin-top: 80px;
+  max-width: 268px;
+}
+
+.header-title {
   color: var(--primary-blue);
   font-weight: bold;
   text-align: center;
+  margin: 0;
 }
 
-.profile-title {
+.header-text {
   color: var(--text-gray);
   text-align: center;
 }
 
-.profile-email, .contact-email {
-  color: #6b7280; 
-  text-align: center;
+.about-me {
+  text-align: left;
+  text-justify: distribute;
 }
-
 
 .profile-image-wrapper {
   position: relative;
@@ -130,6 +135,10 @@ header {
   color: #374151;
 }
 
+.desktop-only {
+  display: none;
+}
+
 @media (min-width: 1280px) {
   header {
     margin: 0 auto;
@@ -155,8 +164,4 @@ header {
 
   .mobile-only { display: none; }
   .desktop-only { display: block; }
-}
-
-@media (max-width: 1279px) {
-  .desktop-only { display: none; }
 }
