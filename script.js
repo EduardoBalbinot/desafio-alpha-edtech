@@ -31,9 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const limitPassed = limitVH - distanceFromTop;
         if (index % 2 == 0) {
-          card.style.transform = `translate(${-limitPassed * 1.5}px, ${limitPassed}px) rotate(-${limitPassed * 0.1}deg) scale(${1 + limitPassed * 0.002})`;
+          card.style.transform = `translate(${-limitPassed * 1.5}px, ${limitPassed}px) rotate(-${limitPassed * 0.1}deg)`;
         } else {
-          card.style.transform = `translate(${limitPassed * 1.5}px, ${limitPassed}px) rotate(${limitPassed * 0.1}deg) scale(${1 + limitPassed * 0.002})`;
+          card.style.transform = `translate(${limitPassed * 1.5}px, ${limitPassed}px) rotate(${limitPassed * 0.1}deg)`;
         }
       } else {
         card.style.transform = "translate(0)";

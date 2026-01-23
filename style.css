@@ -3,6 +3,10 @@
   font-family: sans-serif;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 :root {
   --primary-blue: #1e3a8a; 
   --secondary-blue: #1e40af; 
