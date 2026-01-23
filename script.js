@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         imageContainer.querySelector(".profile-avatar").style.boxShadow = '0 0 0px 0px var(--secondary-blue)';
         imageContainer.style.transform = "scale(1)";
       }
-    }, 500);
+    }, 200);
     lastScrollValue = scrollY;
   });
 
