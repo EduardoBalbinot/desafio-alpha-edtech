@@ -149,6 +149,7 @@ header {
 footer {
   margin-top: 500px;
   height: 400px;
+  height: 25vh;
 }
 
 footer div {
